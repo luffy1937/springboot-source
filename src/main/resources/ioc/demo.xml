@@ -4,8 +4,10 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean id="student" class="com.example.springbootsource.bean.xml.Student">
-        <property name="age" value="18"/>
-        <property name="name" value="xiaoming"/>
+<!--        <property name="age" value="18"/>
+        <property name="name" value="xiaoming"/>-->
+        <constructor-arg index="0" value="zhangsan"/>
+        <constructor-arg index="1" value="20"/>
         <property name="classList">
             <list>
                 <value>math</value>

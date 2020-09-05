@@ -31,6 +31,11 @@ public class Student {
         this.classList = classList;
     }
 
+    public Student(String name, Integer age) {
+        this.name = name;
+        this.age = age;
+    }
+
     @Override
     public String toString() {
         return "Student{" +
