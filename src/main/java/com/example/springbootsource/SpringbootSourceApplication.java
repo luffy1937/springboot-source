@@ -1,6 +1,7 @@
 package com.example.springbootsource;
 
 import com.example.springbootsource.initializer.SecondInitializer;
+import com.example.springbootsource.listener.SecondListener;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -17,6 +18,7 @@ public class SpringbootSourceApplication {
 
 		SpringApplication springApplication = new SpringApplication(SpringbootSourceApplication.class);
 		springApplication.addInitializers(new SecondInitializer());
+		springApplication.addListeners(new SecondListener());
 		springApplication.run(args);
 	}
 	@GetMapping("/test")
