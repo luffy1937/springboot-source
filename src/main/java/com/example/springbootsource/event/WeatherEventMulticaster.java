@@ -1,5 +1,8 @@
 package com.example.springbootsource.event;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class WeatherEventMulticaster extends AbstractEventMulticaster {
     @Override
     void doStart() {

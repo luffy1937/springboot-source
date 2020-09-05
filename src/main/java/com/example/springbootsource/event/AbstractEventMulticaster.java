@@ -1,10 +1,13 @@
 package com.example.springbootsource.event;
 
-import java.util.ArrayList;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import java.util.List;
 
+@Component
 public abstract class AbstractEventMulticaster implements EventMulticaster{
-    List<WeatherListener> listenerList = new ArrayList<>();
+    @Autowired
+    private List<WeatherListener> listenerList;
     public void multicastEvent(WeatherEvent event) {
         doStart();
         listenerList.forEach(i -> i.onWeatherEvent(event));
