@@ -1,12 +1,14 @@
 package com.example.springbootsource.bean.xml;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
 public class HelloService {
     private Student student;
     @Autowired
+    @Qualifier("myCat")
     private Animal animal;
 
     public Animal getAnimal() {
