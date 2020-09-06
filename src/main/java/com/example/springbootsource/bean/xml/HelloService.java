@@ -3,8 +3,21 @@ package com.example.springbootsource.bean.xml;
 public class HelloService {
     private Student student;
 
+    private Animal animal;
+
+    public Animal getAnimal() {
+        return animal;
+    }
+
+    public void setAnimal(Animal animal) {
+        this.animal = animal;
+    }
+
     public String hello(){
         return student.toString();
+    }
+    public String helloAnimal(){
+        return animal.getName();
     }
     public Student getStudent() {
         return student;

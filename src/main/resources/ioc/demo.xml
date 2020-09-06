@@ -17,5 +17,9 @@
     </bean>
     <bean id="helloService" class="com.example.springbootsource.bean.xml.HelloService">
         <property name="student" ref="student"/>
+        <property name="animal" ref="dog"/>
+    </bean>
+    <bean id ="dog"  class="com.example.springbootsource.bean.xml.AnimalFactory" factory-method="getAnimal">
+        <constructor-arg value="dog"/>
     </bean>
 </beans>

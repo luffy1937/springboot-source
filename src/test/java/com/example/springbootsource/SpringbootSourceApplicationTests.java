@@ -16,6 +16,7 @@ class SpringbootSourceApplicationTests {
 	@Test
 	void testhello(){
 		System.out.println(helloService.hello());
+		System.out.println(helloService.helloAnimal());
 	}
 	@Test
 	void contextLoads() {
