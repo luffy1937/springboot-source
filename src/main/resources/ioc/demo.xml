@@ -19,7 +19,13 @@
         <property name="student" ref="student"/>
         <property name="animal" ref="dog"/>
     </bean>
-    <bean id ="dog"  class="com.example.springbootsource.bean.xml.AnimalFactory" factory-method="getAnimal">
+
+    <bean id="animalFactory" class="com.example.springbootsource.bean.xml.AnimalFactory"/>
+
+    <bean id ="dog"  factory-bean="animalFactory" factory-method="getAnimal">
         <constructor-arg value="dog"/>
+    </bean>
+    <bean id ="cat"  factory-bean="animalFactory" factory-method="getAnimal">
+        <constructor-arg value="cat"/>
     </bean>
 </beans>
