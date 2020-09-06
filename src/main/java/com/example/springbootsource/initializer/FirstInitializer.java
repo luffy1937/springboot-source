@@ -14,10 +14,11 @@ public class FirstInitializer implements ApplicationContextInitializer {
     @Override
     public void initialize(ConfigurableApplicationContext configurableApplicationContext) {
         ConfigurableEnvironment environment = configurableApplicationContext.getEnvironment();
-        Map<String, Object> map =  new HashMap<>();
+        environment.setRequiredProperties("aaaaa");
+/*        Map<String, Object> map =  new HashMap<>();
         map.put("key1", "value1");
         MapPropertySource propertySource = new MapPropertySource("firstInitializer", map);
         environment.getPropertySources().addLast(propertySource);
-        System.out.println("run firstInitializer");
+        System.out.println("run firstInitializer");*/
     }
 }
