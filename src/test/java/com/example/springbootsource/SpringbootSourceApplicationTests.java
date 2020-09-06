@@ -1,6 +1,7 @@
 package com.example.springbootsource;
 
 import com.example.springbootsource.bean.ann.MyBeanImport;
+import com.example.springbootsource.bean.ann.Teacher;
 import com.example.springbootsource.bean.xml.HelloService;
 import com.example.springbootsource.event.WeatherRunListener;
 import org.junit.jupiter.api.Test;
@@ -11,7 +12,7 @@ import org.springframework.test.context.ContextConfiguration;
 
 @SpringBootTest
 //@ContextConfiguration(locations = "classpath:ioc/demo.xml")
-	@Import(MyBeanImport.class)
+	//@Import(MyBeanImport.class)
 class SpringbootSourceApplicationTests {
 	@Autowired
 	HelloService helloService;
@@ -23,6 +24,12 @@ class SpringbootSourceApplicationTests {
 	}
 	@Test
 	void contextLoads() {
+	}
+	@Autowired
+	Teacher teacher;
+	@Test
+	void testPost(){
+		System.out.println(teacher.getName());
 	}
 
 }
