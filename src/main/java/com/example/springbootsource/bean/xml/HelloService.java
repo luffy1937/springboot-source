@@ -1,11 +1,12 @@
 package com.example.springbootsource.bean.xml;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
 public class HelloService {
     private Student student;
-
+    @Autowired
     private Animal animal;
 
     public Animal getAnimal() {
