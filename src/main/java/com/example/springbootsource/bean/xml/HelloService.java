@@ -1,5 +1,8 @@
 package com.example.springbootsource.bean.xml;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class HelloService {
     private Student student;
 
@@ -14,7 +17,8 @@ public class HelloService {
     }
 
     public String hello(){
-        return student.toString();
+        // return student.toString();
+        return "hello";
     }
     public String helloAnimal(){
         return animal.getName();

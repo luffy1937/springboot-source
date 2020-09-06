@@ -8,7 +8,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ContextConfiguration;
 
 @SpringBootTest
-@ContextConfiguration(locations = "classpath:ioc/demo.xml")
+//@ContextConfiguration(locations = "classpath:ioc/demo.xml")
 class SpringbootSourceApplicationTests {
 	@Autowired
 	HelloService helloService;
@@ -16,7 +16,7 @@ class SpringbootSourceApplicationTests {
 	@Test
 	void testhello(){
 		System.out.println(helloService.hello());
-		System.out.println(helloService.helloAnimal());
+		//System.out.println(helloService.helloAnimal());
 	}
 	@Test
 	void contextLoads() {
