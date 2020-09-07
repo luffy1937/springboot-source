@@ -9,8 +9,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.annotation.Import;
 import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.TestPropertySource;
 
-@SpringBootTest(properties = {"test=test1"})
+@SpringBootTest(properties = {"ping=pang7"})
+@TestPropertySource({"ping=pang8"})
 //@ContextConfiguration(locations = "classpath:ioc/demo.xml")
 	//@Import(MyBeanImport.class)
 class SpringbootSourceApplicationTests {
