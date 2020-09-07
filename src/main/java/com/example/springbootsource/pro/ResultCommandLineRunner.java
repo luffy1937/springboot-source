@@ -14,6 +14,7 @@ public class ResultCommandLineRunner implements CommandLineRunner, EnvironmentAw
         System.out.println(environment.getProperty("ping"));
         System.out.println(environment.getProperty("pingint"));
         System.out.println(environment.getProperty("system.path"));
+        System.out.println(environment.getProperty("vm.name"));
     }
 
     @Override
