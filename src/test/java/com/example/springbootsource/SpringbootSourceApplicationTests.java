@@ -10,7 +10,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.annotation.Import;
 import org.springframework.test.context.ContextConfiguration;
 
-@SpringBootTest
+@SpringBootTest(properties = {"test=test1"})
 //@ContextConfiguration(locations = "classpath:ioc/demo.xml")
 	//@Import(MyBeanImport.class)
 class SpringbootSourceApplicationTests {
