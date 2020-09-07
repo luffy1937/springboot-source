@@ -12,6 +12,7 @@ public class ResultCommandLineRunner implements CommandLineRunner, EnvironmentAw
     public void run(String... args) throws Exception {
 
         System.out.println(environment.getProperty("ping"));
+        System.out.println(environment.getProperty("pingint"));
     }
 
     @Override
