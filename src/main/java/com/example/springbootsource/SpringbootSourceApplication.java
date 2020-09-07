@@ -10,6 +10,8 @@ import org.springframework.context.annotation.Import;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.Properties;
+
 @SpringBootApplication
 @RestController
 @Import(MyBeanImport.class)
@@ -22,6 +24,9 @@ public class SpringbootSourceApplication {
 		SpringApplication springApplication = new SpringApplication(SpringbootSourceApplication.class);
 		springApplication.addInitializers(new SecondInitializer());
 		springApplication.addListeners(new SecondListener());
+		Properties properties = new Properties();
+		properties.setProperty("ping", "pang");
+		springApplication.setDefaultProperties(properties);
 		springApplication.run(args);
 	}
 	@GetMapping("/test")
